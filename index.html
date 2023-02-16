@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Select Five Players</title>
+</head>
+
+
+<body class="bg-neutral-900">
+    <header>
+        <section class="bg-black flex flex-col sm:flex-col lg:flex-row lg:justify-around pt-20 font-serif">
+            <div><img class="w-12/12" src="images/mbappe.png" alt=""></div>
+            <div class="text-white text-center">
+                <h1 class="text-5xl text-orange-600">Select Your Best Five</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum corrupti quas soluta commodi hic
+                    quaerat
+                    libero distinctio voluptatem necessitatibus! Temporibus saepe assumenda voluptatum dolorem nihil
+                    voluptatem, atque id ex, fugit perspiciatis quas, sequi minus.</p>
+            </div>
+            <div class="flex justify-end items-end">
+                <img class="lg:w-full sm:w-4/12" src="images/football1.png" alt="">
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto my-10">
+            <div class="lg:col-span-2 lg:grid grid-cols-3 gap-4 ">
+                <div class="bg-black md:w-full w-8/12 mx-auto lg:my-0 sm:my-10">
+                    <div>
+                        <img class="h-48 w-full" src="images/messi.jpg" alt="">
+                    </div>
+                    <div class="text-center text-white py-5">
+                        <h1 id="player-1" class="font-bold">Lionel Messi</h1>
+                        <div class="flex justify-around">
+                            <p>36 Goals</p>
+                            <p>120 Assists</p>
+                        </div>
+                        <button id="btn-item1" class="bg-blue-900 px-14 my-2 rounded" type="submit"
+                            class="submit-btn">Select</button>
+                    </div>
+                </div>
+
+
+                <div class="bg-black md:w-full w-8/12 mx-auto lg:my-0 sm:my-10">
+                    <div>
+                        <img class="h-48 w-full" src="images/benzi.jpg" alt="">
+                    </div>
+                    <div class="text-center text-white py-5">
+                        <h1 id="player-2" class="font-bold">Karim Benzema</h1>
+                        <div class="flex justify-around">
+                            <p>36 Goals</p>
+                            <p>120 Assists</p>
+                        </div>
+                        <button id="btn-item2" class="bg-blue-900 px-14 my-2 rounded" type="submit"
+                            class="submit-btn">Select</button>
+                    </div>
+                </div>
+
+
+                <div class="bg-black md:w-full w-8/12 mx-auto lg:my-0 sm:my-10">
+                    <div>
+                        <img class="h-48 w-full" src="images/ronaldo.jpg" alt="">
+                    </div>
+                    <div class="text-center text-white py-5">
+                        <h1 id="player-3" class="font-bold">Ronaldo</h1>
+                        <div class="flex justify-around">
+                            <p>36 Goals</p>
+                            <p>120 Assists</p>
+                        </div>
+                        <button id="btn-item3" class="bg-blue-900 px-14 my-2 rounded" type="submit"
+                            class="submit-btn">Select</button>
+                    </div>
+                </div>
+
+
+                <div class="bg-black md:w-full w-8/12 mx-auto lg:my-0 sm:my-10">
+                    <div>
+                        <img class="h-48 w-full" src="images/neymar.jpg" alt="">
+                    </div>
+                    <div class="text-center text-white py-5">
+                        <h1 id="player-4" class="font-bold">Neymar Jr</h1>
+                        <div class="flex justify-around">
+                            <p>36 Goals</p>
+                            <p>120 Assists</p>
+                        </div>
+                        <button id="btn-item4" class="bg-blue-900 px-14 my-2 rounded" type="submit"
+                            class="submit-btn">Select</button>
+                    </div>
+                </div>
+
+
+                <div class="bg-black md:w-full w-8/12 mx-auto lg:my-0 sm:my-10">
+                    <div>
+                        <img class="h-48 w-full" src="images/ramos.jpg" alt="">
+                    </div>
+                    <div class="text-center text-white py-5">
+                        <h1 id="player-5" class="font-bold">Ramos</h1>
+                        <div class="flex justify-around">
+                            <p>36 Goals</p>
+                            <p>120 Assists</p>
+                        </div>
+                        <button id="btn-item5" class="bg-blue-900 px-14 my-2 rounded" type="submit"
+                            class="submit-btn">Select</button>
+                    </div>
+                </div>
+
+
+                <div class="bg-black md:w-full w-8/12 mx-auto lg:my-0 sm:my-10">
+                    <div>
+                        <img class="h-48 w-full" src="images/vini.webp" alt="">
+                    </div>
+                    <div class="text-center text-white py-5">
+                        <h1 id="player-6" class="font-bold">Vini Jr</h1>
+                        <div class="flex justify-around">
+                            <p>36 Goals</p>
+                            <p>120 Assists</p>
+                        </div>
+                        <button id="btn-item6" class="bg-blue-900 px-14 my-2 rounded" type="submit"
+                            class="submit-btn">Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-y-4">
+
+                <div class=" text-white text-center bg-black h-80  md:w-full w-8/12 mx-auto lg:my-0 sm:my-10 gap-4">
+                    <h1 class="text-3xl py-5 font-bold">Selected V</h1>
+                    <hr class="">
+                    <ul id="list-container">
+                    </ul>
+                </div>
+
+                <div class=" text-white text-center bg-black h-fit md:w-full w-8/12 mx-auto lg:my-0 sm:my-10 gap-4 ">
+                    <h1 class="text-3xl py-5 font-bold">Budget</h1>
+                    <hr class="">
+                    <div class="lg:flex lg:gap-x-5 py-3 container lg:mx-3">
+                        <p>Per Player</p>
+                        <input id="playerRate" class="w-10/12 md:w-10/12 lg:w-6/12 border-dashed border-2 border-white rounded-lg bg-black" type="text" name="" id="">
+                    </div>
+
+
+                    <button id="calculateBtn" class="bg-blue-900 px-16 md:px-14 xl:px-24 my-2 rounded" type="submit" >Calculate</button>
+
+
+                    <div class="lg:flex lg:gap-x-5 py-3 container lg:mx-3">
+                        <p>Player Expenses </p>
+                        <p> $ <span id="playerExpense"> 00 </span> </p>
+                    </div>
+
+                    <div class="lg:flex lg:gap-x-5 py-3 container lg:mx-3">
+                        <p>Manager</p>
+                        <input id="managerRate" class="w-10/12 md:w-10/12 lg:w-6/12 border-dashed border-2 border-white rounded-lg bg-black"
+                            type="text" name="" id="">
+                    </div>
+
+                    <div class="lg:flex lg:gap-x-10 py-3 container lg:mx-3">
+                        <p>Coach</p>
+                        <input id="coachRate" class="w-10/12 md:w-10/12 lg:w-6/12 border-dashed border-2 border-white rounded-lg bg-black"
+                            type="text" name="" id="">
+                    </div>
+
+                    <button id="calculateTotal" class="bg-blue-900 px-16 md:px-14 xl:px-24 my-2 rounded" type="submit"
+                        class="submit-btn">Calculate Total</button>
+                        <div class="lg:flex lg:gap-x-5 py-3 container lg:mx-3">
+                            <p>Player Expenses </p>
+                            <p> $ <span id="totalExpense"> 00 </span> </p>
+                        </div>
+                </div>
+
+                
+
+
+            </div>
+
+        </section>
+    </main>
+    <footer class="py-10">
+        <hr>
+        <h1 class="text-white text-center py-5">
+            Copyright @ 2022 All Rights Reserved.
+        </h1>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
