@@ -1,7 +1,7 @@
 let cnt = 0;
 function addList(inputId) {
     const li = document.createElement('li');
-    const str = cnt + ". " + document.getElementById(inputId).innerText;
+    const str =  " . " + document.getElementById(inputId).innerText;
     console.log(str);
     li.innerText = str;
     const listContainer = document.getElementById('list-container');
@@ -12,16 +12,19 @@ function addList(inputId) {
 };
 function changeSys(inputId) {
     document.getElementById(inputId).setAttribute('disabled', true);
-    document.getElementById(inputId).style.backgroundColor = "grey"
+    document.getElementById(inputId).style.backgroundColor = "grey";
 };
 
-
+function changeSys2(inputId) {
+    document.getElementById(inputId).removeAttribute('disabled');
+    document.getElementById(inputId).style.backgroundColor = "blue";
+};
 
 document.getElementById('btn-item1').addEventListener('click', function () {
     cnt++;
     if (cnt <= 5) {
         addList('player-1');
-        changeSys('btn-item1')
+        changeSys('btn-item1');
     }
 });
 
@@ -29,7 +32,7 @@ document.getElementById('btn-item2').addEventListener('click', function () {
     cnt++;
     if (cnt <= 5) {
         addList('player-2');
-        changeSys('btn-item2')
+        changeSys('btn-item2');
     }
 });
 
@@ -37,7 +40,7 @@ document.getElementById('btn-item3').addEventListener('click', function () {
     cnt++;
     if (cnt <= 5) {
         addList('player-3');
-        changeSys('btn-item3')
+        changeSys('btn-item3');
     }
 });
 
@@ -45,7 +48,7 @@ document.getElementById('btn-item4').addEventListener('click', function () {
     cnt++;
     if (cnt <= 5) {
         addList('player-4');
-        changeSys('btn-item4')
+        changeSys('btn-item4');
     }
 });
 
@@ -53,7 +56,7 @@ document.getElementById('btn-item5').addEventListener('click', function () {
     cnt++;
     if (cnt <= 5) {
         addList('player-5');
-        changeSys('btn-item5')
+        changeSys('btn-item5');
     }
 });
 
@@ -61,12 +64,13 @@ document.getElementById('btn-item6').addEventListener('click', function () {
     cnt++;
     if (cnt <= 5) {
         addList('player-6');
-        changeSys('btn-item6')
+        changeSys('btn-item6');
     }
 });
 
 document.getElementById('list-container').addEventListener('click', function (event) {
     event.target.parentNode.removeChild(event.target);
+    cnt--;
 });
 let newRate = 0;
 document.getElementById('calculateBtn').addEventListener('click', function () {
@@ -88,6 +92,6 @@ document.getElementById('calculateTotal').addEventListener('click', function () 
         alert("Please Input price")
     else {
         const totalValue = parseInt(newRate) + parseInt(managerRate) + parseInt(coachRate);
-        document.getElementById('totalExpense').innerText = totalValue
+        document.getElementById('totalExpense').innerText = totalValue;
     }
 });
